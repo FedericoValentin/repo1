@@ -11,28 +11,29 @@
       }
        function realizarPeticion(url, metodo, funcion){
          peticionHTTP.onreadystatechange = funcion;
-         peticionHTTP.open(url, metodo, true);
+         peticionHTTP.open(metodo, url, true);
          peticionHTTP.send(null);
        }
         
        function descargarArchivo(){
           inicializar_XHR();
-          realizarPeticion("archivo.txt", "GET", funcionActuadora);
+          realizarPeticion("archivo.txt", "GET", funcActuadora);
        }
         
-       function funcionActuadora(){
+       function funcActuadora(){
+           alert("Actuando");
          if(peticionHTTP.readyState == 4)
            if(peticionHTTP.status == 200)
              document.write(peticionHTTP.responseText);
        }
-        
+    
        window.onload = descargarArchivo;
         
     </script>
   </head>
 <body>
 
-<h1>Ajax 17:31</h1>
+<h1>Ajax 17:38</h1>
 
 </body>
 </html>
