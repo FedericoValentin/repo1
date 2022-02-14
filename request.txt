@@ -1,0 +1,1 @@
+Respuesta obtenida mediante la técnica AJAX.
