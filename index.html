@@ -7,9 +7,8 @@
 
 <body>
 
-    <h1>Ajax 18:08</h1>
+    <h1>Ajax 18:16</h1>
     <button onclick="descargarArchivo()">Click me</button>
-    <p id="parrafo"></p>
 
 
     <script>
@@ -35,8 +34,10 @@
             //alert("Actuando");
             if (peticionHTTP.readyState == 4) {
                 if (peticionHTTP.status == 200) {
-
-                   alert(peticionHTTP.responseText);
+                    var texto = peticionHTTP.responseText;
+                    var elemento = createElement("p");
+                    elemento.appendChild(texto);
+                    document.body.appendChild(elemento);
                 }
             }
         }
