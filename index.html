@@ -8,7 +8,7 @@
 <body>
 
     <h1>Ajax 18:30</h1>
-    <button onclick="descargarArchivo()">Click me</button>
+    <button onclick="descargarArchivo()">Consultar servidor</button>
 
 
     <script>
@@ -31,7 +31,6 @@
         }
 
         function funcActuadora() {
-            alert("Actuando");
             if (peticionHTTP.readyState == 4) {
                 if (peticionHTTP.status == 200) {
                     var contenido = document.createTextNode(peticionHTTP.responseText);
@@ -41,9 +40,6 @@
                 }
             }
         }
-
- //      window.onload = descargarArchivo;
-
     </script>
 </body>
 
