@@ -13,6 +13,20 @@
          peticionHTTP.open(url, metodo, true);
          peticionHTTP.send(null);
        }
+        
+       function descargarArchivo(){
+          inicializar_XHR();
+          realizarPeticion("archivo.txt", "GET", funcionActuadora);
+       }
+        
+       funtion funcionActuadora(){
+         if(peticionHTTP.readyState == 4)
+           if(peticionHTTP.statud == 200)
+             document.write(peticionHttp.responseText);
+       }
+        
+       window.onload = descargarArchvo;
+        
     </script>
   </head>
 <body>
