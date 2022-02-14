@@ -6,8 +6,6 @@
 </head>
 
 <body style="text-align:center">
-
-    <br>
     <h1>Consulte una respuesta al servidor:</h1>
     <button onclick="descargarArchivo()">Consultar</button>
 
@@ -28,7 +26,7 @@
 
         function descargarArchivo() {
             inicializar_XHR();
-            realizarPeticion("archivo.txt", "GET", funcActuadora);
+            realizarPeticion("request.txt", "GET", funcActuadora);
         }
 
         function funcActuadora() {
