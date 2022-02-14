@@ -24,7 +24,9 @@
            alert("Actuando");
          if(peticionHTTP.readyState == 4)
            if(peticionHTTP.status == 200)
-             document.write(peticionHTTP.responseText);
+           { 
+             var p = getElementById("parrafo");
+             p.innerHTML = peticionHTTP.responseText;
        }
     
  //      window.onload = descargarArchivo;
@@ -33,7 +35,8 @@
   </head>
 <body>
 
-<h1>Ajax 17:46</h1>
+<h1>Ajax 17:55</h1>
 <button onclick="descargarArchivo()">Click me</button>
+<p id="parrafo">""</p>
 </body>
 </html>
