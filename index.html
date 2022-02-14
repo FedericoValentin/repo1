@@ -1,47 +1,50 @@
 <!DOCTYPE html>
 <html>
-  <head>
-   
-  </head>
+
+<head>
+
+</head>
+
 <body>
 
-<h1>Ajax 18:02</h1>
-<button onclick="descargarArchivo()">Click me</button>
-<p id="parrafo"></p>
-  
-  
-   <script>
-      function inicializar_XHR(){
-       if(window.XMLHttpRequest){
-          peticionHTTP = new XMLHttpRequest();
-       }else{
-         peticionHTTP = new ActiveXObject("Microsoft.XMLHTTP");
+    <h1>Ajax 18:06</h1>
+    <button onclick="descargarArchivo()">Click me</button>
+    <p id="parrafo"></p>
+
+
+    <script>
+        function inicializar_XHR() {
+            if (window.XMLHttpRequest) {
+                peticionHTTP = new XMLHttpRequest();
+            } else {
+                peticionHTTP = new ActiveXObject("Microsoft.XMLHTTP");
+            }
         }
-      }
-       function realizarPeticion(url, metodo, funcion){
-         peticionHTTP.onreadystatechange = funcion;
-         peticionHTTP.open(metodo, url, true);
-         peticionHTTP.send(null);
-       }
-        
-       function descargarArchivo(){
-          inicializar_XHR();
-          realizarPeticion("archivo.txt", "GET", funcActuadora);
-       }
-        
-       function funcActuadora(){
-           alert("Actuando");
-         if(peticionHTTP.readyState == 4){
-           if(peticionHTTP.status == 200)
-           { 
-             var p = getElementById("parrafo");
-             p.innerHTML = peticionHTTP.responseText;
-       }
-         }
-       }
-    
+        function realizarPeticion(url, metodo, funcion) {
+            peticionHTTP.onreadystatechange = funcion;
+            peticionHTTP.open(metodo, url, true);
+            peticionHTTP.send(null);
+        }
+
+        function descargarArchivo() {
+            inicializar_XHR();
+            realizarPeticion("archivo.txt", "GET", funcActuadora);
+        }
+
+        function funcActuadora() {
+            alert("Actuando");
+            if (peticionHTTP.readyState == 4) {
+                if (peticionHTTP.status == 200) {
+                    var p = getElementById("parrafo");
+                    p.innerHTML = "Prueba";
+                   // document.write(peticionHTTP.responseText);
+                }
+            }
+        }
+
  //      window.onload = descargarArchivo;
-        
+
     </script>
 </body>
+
 </html>
