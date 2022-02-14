@@ -1,5 +1,20 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script>
+      function inicializar_XHR(){
+       if(wondow.XMLHttpRequest){
+          peticionHTTP = new XMLHttpRequest();
+       }else{
+         peticionHTTP = new ActiveXObjecto("Microsoft.XMLHTTP");
+        }
+       function realizarPeticion(url, metodo, funcion){
+         peticionHHTP.onreadystatechange = funcion;
+         peticionHTTP.open(url, metodo, true);
+         peticionHTTP.send(null);
+       }
+    </script>
+  </head>
 <body>
 
 <h1>12:37</h1>
