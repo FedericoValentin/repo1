@@ -7,7 +7,7 @@
 
 <body>
 
-    <h1>Ajax 18:06</h1>
+    <h1>Ajax 18:08</h1>
     <button onclick="descargarArchivo()">Click me</button>
     <p id="parrafo"></p>
 
@@ -32,12 +32,11 @@
         }
 
         function funcActuadora() {
-            alert("Actuando");
+            //alert("Actuando");
             if (peticionHTTP.readyState == 4) {
                 if (peticionHTTP.status == 200) {
-                    var p = getElementById("parrafo");
-                    p.innerHTML = "Prueba";
-                   // document.write(peticionHTTP.responseText);
+
+                   alert(peticionHTTP.responseText);
                 }
             }
         }
