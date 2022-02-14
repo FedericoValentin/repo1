@@ -7,7 +7,7 @@
 
 <body>
 
-    <h1>Ajax 18:16</h1>
+    <h1>Ajax 18:25</h1>
     <button onclick="descargarArchivo()">Click me</button>
 
 
@@ -34,10 +34,7 @@
             alert("Actuando");
             if (peticionHTTP.readyState == 4) {
                 if (peticionHTTP.status == 200) {
-                
-                    var texto = peticionHTTP.responseText;
-                    alert("Respuesta");
-                    alert(texto);
+                    var texto = "Prueba";
                     var elemento = createElement("p");
                     elemento.appendChild(texto);
                     document.body.appendChild(elemento);
