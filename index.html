@@ -3,7 +3,7 @@
   <head>
     <script>
       function inicializar_XHR(){
-       if(wondow.XMLHttpRequest){
+       if(window.XMLHttpRequest){
           peticionHTTP = new XMLHttpRequest();
        }else{
          peticionHTTP = new ActiveXObjecto("Microsoft.XMLHTTP");
@@ -22,7 +22,7 @@
         
        function funcionActuadora(){
          if(peticionHTTP.readyState == 4)
-           if(peticionHTTP.statud == 200)
+           if(peticionHTTP.status == 200)
              document.write(peticionHttp.responseText);
        }
         
@@ -32,7 +32,7 @@
   </head>
 <body>
 
-<h1>Ajax 17:27</h1>
+<h1>Ajax 17:28</h1>
 
 </body>
 </html>
