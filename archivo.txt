@@ -1,1 +1,1 @@
-Respuesta ha sido obtenida mediante la técnica AJAX.
+Respuesta obtenida mediante la técnica AJAX.
