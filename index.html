@@ -8,6 +8,7 @@
        }else{
          peticionHTTP = new ActiveXObjecto("Microsoft.XMLHTTP");
         }
+      }
        function realizarPeticion(url, metodo, funcion){
          peticionHHTP.onreadystatechange = funcion;
          peticionHTTP.open(url, metodo, true);
