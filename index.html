@@ -34,7 +34,10 @@
             alert("Actuando");
             if (peticionHTTP.readyState == 4) {
                 if (peticionHTTP.status == 200) {
+                
                     var texto = peticionHTTP.responseText;
+                    alert("Respuesta");
+                    alert(texto);
                     var elemento = createElement("p");
                     elemento.appendChild(texto);
                     document.body.appendChild(elemento);
