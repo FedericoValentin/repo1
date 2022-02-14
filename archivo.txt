@@ -1,1 +1,1 @@
-Hola Mundillo!
+Respuesta ha sido obtenida mediante la técnica AJAX.
